@@ -1,0 +1,50 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "SumoUE4",
+	"Description": "Importer for SUMO .net.xml files",
+	"Category": "Other",
+	"CreatedBy": "Iwer Petersen",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": true,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "SumoUE4",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+            "AdditionalDependencies": [
+				"GeoReference",
+				"SpatialGeometryTools"
+                ]
+		},
+    	{
+			"Name": "SumoUE4Editor",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit",
+            "AdditionalDependencies": [
+				"GeoReference"
+                ]
+		}
+	],
+	"Plugins": [
+		{
+			"Enabled": true,
+			"Name": "ProceduralMeshComponent"
+		},
+        {
+            "Enabled": true,
+            "Name": "GeoReference"
+        },
+		{
+			"Enabled": true,
+			"Name": "SpatialGeometryTools"
+		}
+	]
+}
