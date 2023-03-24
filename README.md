@@ -1,8 +1,13 @@
 # SumoUE4
 
-UE4 Plugin to import [SUMO](https://www.eclipse.org/sumo/) *.net.xml files into UE4Editor and generate roads. It is inspired by and builds upon the work of [CruzWay](https://github.com/AugmentedDesignLab/CruzWay) but tries to be more flexible by separating data and representation.
+Unreal Engine Plugin to import [SUMO](https://www.eclipse.org/sumo/) *.net.xml files into Unreal Editor and generate roads. It is inspired by and builds upon the work of [CruzWay](https://github.com/AugmentedDesignLab/CruzWay) but tries to be more flexible by separating data and representation.
 
 This should be considered WIP.
+
+## Compatibility
+
+* Unreal Engine 4 is supported at least with 4.27 (branch ue4, tag ue4.27)
+* Unreal Engine 5 is supported up to 5.1 (on master branch)
 
 ## Dependencies
 
