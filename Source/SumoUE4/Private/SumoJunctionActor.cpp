@@ -61,7 +61,7 @@ void ASumoJunctionActor::ConstructMesh(TArray<FVector> &vertices)
     data.OrigVertexNum = vertices.Num();
 
     // these we want to have, remember min & max
-    float minX, maxX, minY, maxY, maxZ;
+    double minX, maxX, minY, maxY, maxZ;
     minX = minY = std::numeric_limits<float>::max();
     maxX = maxY = maxZ = std::numeric_limits<float>::min();
 
