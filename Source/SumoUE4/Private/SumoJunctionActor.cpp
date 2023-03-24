@@ -9,8 +9,8 @@
 // Sets default values
 ASumoJunctionActor::ASumoJunctionActor()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = false;
+     // Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+    PrimaryActorTick.bCanEverTick = false;
 
     ProcMesh = CreateDefaultSubobject<UProceduralMeshComponent>(TEXT("ProcMesh"));
     PavementHeight = 10; // 10cm
@@ -19,14 +19,14 @@ ASumoJunctionActor::ASumoJunctionActor()
 // Called when the game starts or when spawned
 void ASumoJunctionActor::BeginPlay()
 {
-	Super::BeginPlay();
+    Super::BeginPlay();
 
 }
 
 // Called every frame
 void ASumoJunctionActor::Tick(float DeltaTime)
 {
-	Super::Tick(DeltaTime);
+    Super::Tick(DeltaTime);
 
 }
 void ASumoJunctionActor::OnConstruction(const FTransform &Transform)
@@ -90,12 +90,12 @@ void ASumoJunctionActor::ConstructMesh(TArray<FVector> &vertices)
     }
 
     // tesselate using earcut
-    data.TriIndices = PolygonHelper::TesselatePolygon(data.Vertices, true);
+    data.TriIndices = PolygonHelper::TessellatePolygon(data.Vertices, TArray<FVector>(), true);
     data.Normals.Init(FVector(0, 0, 1), data.Vertices.Num());
     data.Tangents.Init(FProcMeshTangent(1, 0, 0),data.Vertices.Num());
     data.VertColors.Init(FLinearColor(0, 0, 0, 1), data.Vertices.Num());
-    
-    // UV mapping 
+
+    // UV mapping
     data.UV0 = PolygonHelper::FlatUVMap(data.Vertices);
 
     // create side mesh sections

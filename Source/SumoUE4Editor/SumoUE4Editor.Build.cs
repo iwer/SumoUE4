@@ -19,10 +19,7 @@ public class SumoUE4Editor : ModuleRules
 				// ... add other private include paths required here ...
 				"SumoUE4Editor/Private",
 				"SumoUE4Editor/Private/Factories",
-				"SumoUE4Editor/Private/Helpers",
-//				"SumoUE4Editor/Private/AssetTools",
-//				"SumoUE4Editor/Private/Landscape",
-//				"SumoUE4Editor/Private/Styles"
+				"SumoUE4Editor/Private/Helpers"
 			});
 
 
